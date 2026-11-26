@@ -1,0 +1,27 @@
+name: 💡 Idea or feature request
+description: Suggest something Tensyr could do, show or do better.
+title: "[Idea] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What would you like to do?
+      description: Describe what you're trying to see or achieve — the problem, not only the solution.
+      placeholder: I want to see at a glance which model is closest to running out of KV cache.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: How could Tensyr help?
+      placeholder: A tile with the fullest KV cache across all models, with the model's name.
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else
+      description: Sketches, screenshots, or how you do it today.
+    validations:
+      required: false

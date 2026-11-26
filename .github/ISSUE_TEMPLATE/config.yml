@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/hpmnt/Tensyr/security/advisories/new
+    about: Please report security problems privately, never in a public issue. See the Security Policy.
+  - name: 📖 User guide and FAQ (wiki)
+    url: https://github.com/hpmnt/Tensyr/wiki
+    about: Installing, connecting servers, what the numbers mean, alerts and troubleshooting.

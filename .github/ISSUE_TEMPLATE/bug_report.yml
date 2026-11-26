@@ -1,0 +1,131 @@
+name: 🐞 Bug report
+description: Something in Tensyr doesn't work the way it should.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a problem! Issues on this page are **public** — please don't include API keys, passwords, or internal host names and IP addresses you'd rather not share (replace them with `gpu-server-01` or similar).
+
+        🔒 **Found a security problem?** Don't report it here — use the [private security report](https://github.com/hpmnt/Tensyr/security/advisories/new) instead.
+
+  - type: input
+    id: version
+    attributes:
+      label: Tensyr version
+      description: Shown at the bottom left of the Tensyr window (e.g. `v0.4.0`).
+      placeholder: v0.4.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: windows
+    attributes:
+      label: Windows version
+      options:
+        - Windows 11
+        - Windows 10
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of Tensyr?
+      options:
+        - Installing or updating
+        - Connecting a model server
+        - GPU stats (dcgm-exporter)
+        - Overview / machine dashboard
+        - Model cards and charts
+        - Average tok/s or efficiency
+        - Customize (show, hide, reorder)
+        - Alerts and notifications
+        - Settings and API keys
+        - Help, What's new
+        - Something else
+    validations:
+      required: true
+
+  - type: dropdown
+    id: server
+    attributes:
+      label: Model server involved (if any)
+      options:
+        - Not about a model server
+        - vLLM
+        - SGLang
+        - TGI
+        - llama.cpp
+        - Ollama
+        - OpenAI-compatible (LM Studio, LocalAI …)
+        - Several / not sure
+    validations:
+      required: false
+
+  - type: input
+    id: server-version
+    attributes:
+      label: Server and exporter versions
+      description: The model server's version and, for GPU problems, the dcgm-exporter image tag.
+      placeholder: vLLM 0.11.0, dcgm-exporter 4.2.3-4.1.1
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem. Include any error message exactly as Tensyr shows it (for example the red text on a model card, or the result of **Test connection**).
+      placeholder: My SGLang model shows "found no SGLang metrics" although the server is running.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to make it happen
+      placeholder: |
+        1. Settings → + Add model, type SGLang, URL http://gpu-server-01:30000/metrics
+        2. Test connection
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: false
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Sometimes
+        - It happened once
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or anything else
+      description: Drag screenshots in here. If a server's metrics page is involved, a few lines of it help (remove host names first).
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I'm using the latest version of Tensyr (Settings › About & updates › Check now).
+          required: false
+        - label: I searched the existing issues and this hasn't been reported yet.
+          required: true

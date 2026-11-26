@@ -1,0 +1,22 @@
+name: ❓ Question
+description: Ask how something works, or for help setting Tensyr up.
+title: "[Question] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The [wiki](https://github.com/hpmnt/Tensyr/wiki) and the built-in help (**F1** in Tensyr) answer most questions — especially [Connecting servers](https://github.com/hpmnt/Tensyr/wiki/Connecting-Servers) and [FAQ and troubleshooting](https://github.com/hpmnt/Tensyr/wiki/FAQ-and-Troubleshooting).
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Tensyr version
+      placeholder: v0.4.0
+    validations:
+      required: false
