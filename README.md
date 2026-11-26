@@ -20,6 +20,7 @@ Tensyr shows what your GPU servers and the AI models running on them are doing, 
 - **Capacity** — running and waiting requests, KV-cache use, preemptions, prefix-cache hits, average prompt and output length, speculative-decoding acceptance.
 - **GPUs in detail** — utilization and **tensor-core activity**, temperature (core and HBM), power against the limit, VRAM, clocks, NVLink and PCIe traffic, and **why** a GPU is throttled.
 - **Alerts** — GPU temperature, throttling, **hardware errors (XID, ECC, row remapping)**, a growing queue, a full KV cache, slow first tokens, and servers that stop answering. They run in the background with Windows notifications. **Red always means an alert, and nothing else.** See [Alerts](https://github.com/hpmnt/Tensyr/wiki/Alerts).
+- **Scoreboard** — the record of each stat (latency: the worst) per machine and for the fleet, for today, this week and all time. See [The scoreboard](https://github.com/hpmnt/Tensyr/wiki/Scoreboard).
 - **Your layout** — **Customize** shows or hides any tile, section or chart and lets you drag them into your own order; **compact GPU cards** fit eight GPUs on a row. See [Customizing the dashboard](https://github.com/hpmnt/Tensyr/wiki/Customizing-the-Dashboard).
 - **Safe with API keys** — optional per model, encrypted with Windows (DPAPI), only ever sent to that model's own URL.
 - **Demo mode** — simulated servers (with overloads and alerts) so you can explore before connecting anything.
@@ -37,6 +38,7 @@ Tensyr only **reads** the metrics pages of the servers you add. It has no server
 - [Getting started](https://github.com/hpmnt/Tensyr/wiki/Getting-Started) — the first run and the basics
 - [Connecting servers](https://github.com/hpmnt/Tensyr/wiki/Connecting-Servers) — dcgm-exporter and every supported model server, step by step
 - [The dashboard](https://github.com/hpmnt/Tensyr/wiki/The-Dashboard) — what every number means
+- [The scoreboard](https://github.com/hpmnt/Tensyr/wiki/Scoreboard) — the top value of each stat
 - [Customizing the dashboard](https://github.com/hpmnt/Tensyr/wiki/Customizing-the-Dashboard)
 - [Alerts](https://github.com/hpmnt/Tensyr/wiki/Alerts)
 - [FAQ and troubleshooting](https://github.com/hpmnt/Tensyr/wiki/FAQ-and-Troubleshooting)
